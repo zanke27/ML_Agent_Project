@@ -1,0 +1,47 @@
+{
+    "EnemyWall": {
+        "checkpoints": [
+            {
+                "steps": 383711,
+                "file_path": "results\\EnemyWall_01\\EnemyWall\\EnemyWall-383711.onnx",
+                "reward": -0.4536499775131233,
+                "creation_time": 1686880522.406077,
+                "auxillary_file_paths": [
+                    "results\\EnemyWall_01\\EnemyWall\\EnemyWall-383711.pt"
+                ]
+            },
+            {
+                "steps": 499999,
+                "file_path": "results\\EnemyWall_01\\EnemyWall\\EnemyWall-499999.onnx",
+                "reward": 0.06630001973826438,
+                "creation_time": 1686881062.9903584,
+                "auxillary_file_paths": [
+                    "results\\EnemyWall_01\\EnemyWall\\EnemyWall-499999.pt"
+                ]
+            },
+            {
+                "steps": 500002,
+                "file_path": "results\\EnemyWall_01\\EnemyWall\\EnemyWall-500002.onnx",
+                "reward": 0.06630001973826438,
+                "creation_time": 1686881063.0272279,
+                "auxillary_file_paths": [
+                    "results\\EnemyWall_01\\EnemyWall\\EnemyWall-500002.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500002,
+            "file_path": "results\\EnemyWall_01\\EnemyWall.onnx",
+            "reward": 0.06630001973826438,
+            "creation_time": 1686881063.0272279,
+            "auxillary_file_paths": [
+                "results\\EnemyWall_01\\EnemyWall\\EnemyWall-500002.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.26.0",
+        "torch_version": "1.13.1+cpu"
+    }
+}

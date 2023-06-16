@@ -7,6 +7,8 @@ TagManager:
   - PlayerMoveWall
   - EnemyMoveWall
   - Wall
+  - PlayerDeadWall
+  - EnemyDeadWall
   layers:
   - Default
   - TransparentFX

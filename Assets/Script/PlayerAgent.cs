@@ -5,7 +5,7 @@ using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
 
-public class EnemyAgent : Agent
+public class PlayerAgent : Agent
 {
     [SerializeField] private Ball ball;
     private Rigidbody rb;
@@ -18,7 +18,7 @@ public class EnemyAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-        transform.localPosition = new Vector3(0, 0.75f, 10);
+        transform.localPosition = new Vector3(0, 0.75f, -10);
         ball.transform.localPosition = new Vector3(0, 0.75f, -5);
         ball.rb.velocity = Vector3.zero;
 
