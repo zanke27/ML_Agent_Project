@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
@@ -14,6 +15,12 @@ public class Ball : MonoBehaviour
 
     [SerializeField]
     private float speed = 5;
+
+    private int playerScore = 0;
+    private int enemyScore = 0;
+
+    [SerializeField] private TextMeshProUGUI playerText;
+    [SerializeField] private TextMeshProUGUI enemyText;
 
     private void Awake()
     {
@@ -34,18 +41,25 @@ public class Ball : MonoBehaviour
         }
         else if (collision.collider.CompareTag("PlayerMoveWall"))
         {
-            playerAgent.AddReward(0.1f);
+            //playerAgent.AddReward(0.1f);
         }
         else if (collision.collider.CompareTag("PlayerDeadWall"))
         {
             enemyAgent.AddReward(1f);
-            playerAgent.AddReward(-1f);
+            //playerAgent.AddReward(-1f);
+            enemyScore++;
+            enemyText.SetText("Enemy: " + enemyScore.ToString());
+
             enemyAgent.EndEpisode();
+
         }
         else if (collision.collider.CompareTag("EnemyDeadWall"))
         {
             enemyAgent.AddReward(-1f);
-            playerAgent.AddReward(1f);
+            //playerAgent.AddReward(1f);
+            playerScore++;
+            playerText.SetText("Player: " + playerScore.ToString());
+
             enemyAgent.EndEpisode();
         }
     }

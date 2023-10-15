@@ -29,6 +29,7 @@ public class EnemyAgent : Agent
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(ball.transform.position);
+        sensor.AddObservation(ball.transform.forward);
     }
 
     public override void OnActionReceived(ActionBuffers actions)
